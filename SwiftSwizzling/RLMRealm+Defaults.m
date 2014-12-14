@@ -14,7 +14,7 @@
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        NSLog(@"Swizzling RLMRealm in Objective-C");
+        NSLog(@"[ObjC] Swizzling RLMRealm");
 
         Class class = [self class];
 
@@ -24,20 +24,14 @@
         Method originalMethod = class_getClassMethod(class, originalSelector);
         Method swizzledMethod = class_getClassMethod(class, swizzledSelector);
 
-        IMP originalImplementation = method_getImplementation(originalMethod);
-        IMP swizzledImplementation = method_getImplementation(swizzledMethod);
-
-        const char *originalTypeEncoding = method_getTypeEncoding(originalMethod);
-        const char *swizzledTypeEncoding = method_getTypeEncoding(swizzledMethod);
-
         // This doesn't actually swizzle the method, but if not called Swift won't be able to either?!
-        BOOL didAddMethod = class_addMethod(class, originalSelector, swizzledImplementation, swizzledTypeEncoding);
+        BOOL didAddMethod = class_addMethod(class, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
         if (didAddMethod) {
-            class_replaceMethod(class, swizzledSelector, originalImplementation, originalTypeEncoding);
-            NSLog(@"Replaced method");
+            class_replaceMethod(class, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
+            NSLog(@"[ObjC] Replaced method");
         } else {
             method_exchangeImplementations(originalMethod, swizzledMethod);
-            NSLog(@"Exchanged implementation");
+            NSLog(@"[ObjC] Exchanged implementation");
         }
     });
 }

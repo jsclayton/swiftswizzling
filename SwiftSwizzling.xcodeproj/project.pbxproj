@@ -17,6 +17,7 @@
 		52A3B11D1A3E159F008ACD17 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A3B11C1A3E159F008ACD17 /* Realm.framework */; };
 		52A3B11F1A3E15AD008ACD17 /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3B11E1A3E15AD008ACD17 /* RLMSupport.swift */; };
 		52A3B1231A3E1623008ACD17 /* RLMRealm+Defaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A3B1221A3E1623008ACD17 /* RLMRealm+Defaults.m */; };
+		52A3B1251A3E1719008ACD17 /* RLMRealm+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3B1241A3E1719008ACD17 /* RLMRealm+Defaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		52A3B1201A3E1623008ACD17 /* SwiftSwizzling-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftSwizzling-Bridging-Header.h"; sourceTree = "<group>"; };
 		52A3B1211A3E1623008ACD17 /* RLMRealm+Defaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RLMRealm+Defaults.h"; sourceTree = "<group>"; };
 		52A3B1221A3E1623008ACD17 /* RLMRealm+Defaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RLMRealm+Defaults.m"; sourceTree = "<group>"; };
+		52A3B1241A3E1719008ACD17 /* RLMRealm+Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RLMRealm+Defaults.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 				52A3B11E1A3E15AD008ACD17 /* RLMSupport.swift */,
 				52A3B1211A3E1623008ACD17 /* RLMRealm+Defaults.h */,
 				52A3B1221A3E1623008ACD17 /* RLMRealm+Defaults.m */,
+				52A3B1241A3E1719008ACD17 /* RLMRealm+Defaults.swift */,
 				52A3B1201A3E1623008ACD17 /* SwiftSwizzling-Bridging-Header.h */,
 			);
 			path = SwiftSwizzling;
@@ -240,6 +243,7 @@
 			files = (
 				52A3B0FC1A3E154C008ACD17 /* ViewController.swift in Sources */,
 				52A3B1231A3E1623008ACD17 /* RLMRealm+Defaults.m in Sources */,
+				52A3B1251A3E1719008ACD17 /* RLMRealm+Defaults.swift in Sources */,
 				52A3B11F1A3E15AD008ACD17 /* RLMSupport.swift in Sources */,
 				52A3B0FA1A3E154C008ACD17 /* AppDelegate.swift in Sources */,
 			);

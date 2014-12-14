@@ -16,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+
+        RLMRealm.swizzle()
         println("Default Realm path: \(RLMRealm.defaultRealm().path)")
 
         return true
