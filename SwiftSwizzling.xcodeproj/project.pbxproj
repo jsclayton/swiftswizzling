@@ -16,7 +16,6 @@
 		52A3B11A1A3E1587008ACD17 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A3B1191A3E1587008ACD17 /* libc++.dylib */; };
 		52A3B11D1A3E159F008ACD17 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52A3B11C1A3E159F008ACD17 /* Realm.framework */; };
 		52A3B11F1A3E15AD008ACD17 /* RLMSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3B11E1A3E15AD008ACD17 /* RLMSupport.swift */; };
-		52A3B1231A3E1623008ACD17 /* RLMRealm+Defaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 52A3B1221A3E1623008ACD17 /* RLMRealm+Defaults.m */; };
 		52A3B1251A3E1719008ACD17 /* RLMRealm+Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A3B1241A3E1719008ACD17 /* RLMRealm+Defaults.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,8 +44,6 @@
 		52A3B11C1A3E159F008ACD17 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		52A3B11E1A3E15AD008ACD17 /* RLMSupport.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMSupport.swift; sourceTree = "<group>"; };
 		52A3B1201A3E1623008ACD17 /* SwiftSwizzling-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftSwizzling-Bridging-Header.h"; sourceTree = "<group>"; };
-		52A3B1211A3E1623008ACD17 /* RLMRealm+Defaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RLMRealm+Defaults.h"; sourceTree = "<group>"; };
-		52A3B1221A3E1623008ACD17 /* RLMRealm+Defaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RLMRealm+Defaults.m"; sourceTree = "<group>"; };
 		52A3B1241A3E1719008ACD17 /* RLMRealm+Defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RLMRealm+Defaults.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,8 +96,6 @@
 				52A3B0FD1A3E154C008ACD17 /* Main.storyboard */,
 				52A3B1021A3E154C008ACD17 /* LaunchScreen.xib */,
 				52A3B11E1A3E15AD008ACD17 /* RLMSupport.swift */,
-				52A3B1211A3E1623008ACD17 /* RLMRealm+Defaults.h */,
-				52A3B1221A3E1623008ACD17 /* RLMRealm+Defaults.m */,
 				52A3B1241A3E1719008ACD17 /* RLMRealm+Defaults.swift */,
 				52A3B1201A3E1623008ACD17 /* SwiftSwizzling-Bridging-Header.h */,
 			);
@@ -242,7 +237,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				52A3B0FC1A3E154C008ACD17 /* ViewController.swift in Sources */,
-				52A3B1231A3E1623008ACD17 /* RLMRealm+Defaults.m in Sources */,
 				52A3B1251A3E1719008ACD17 /* RLMRealm+Defaults.swift in Sources */,
 				52A3B11F1A3E15AD008ACD17 /* RLMSupport.swift in Sources */,
 				52A3B0FA1A3E154C008ACD17 /* AppDelegate.swift in Sources */,
@@ -450,6 +444,7 @@
 				52A3B1151A3E154C008ACD17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		52A3B1161A3E154C008ACD17 /* Build configuration list for PBXNativeTarget "SwiftSwizzlingTests" */ = {
 			isa = XCConfigurationList;
@@ -458,6 +453,7 @@
 				52A3B1181A3E154C008ACD17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

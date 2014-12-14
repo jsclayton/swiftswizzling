@@ -19,22 +19,10 @@ extension RLMRealm {
         dispatch_once(&Static.onceToken) {
             NSLog("[Swift] Swizzling RLMRealm")
 
-            let originalSelector: Selector = "defaultRealm"
-            let swizzledSelector: Selector = "swift_appRealm"
+            let originalMethod = class_getClassMethod(self, "defaultRealm")
+            let swizzledMethod = class_getClassMethod(self, "swift_appRealm")
 
-            let originalMethod: Method = class_getClassMethod(self, originalSelector)
-            let swizzledMethod: Method = class_getClassMethod(self, swizzledSelector)
-
-            let didAddMethod = class_addMethod(self, originalSelector, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod))
-            if (didAddMethod) {
-                // This runs when the ObjC version is commented out and the result is that it does NOT work
-                class_replaceMethod(self, swizzledSelector, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod))
-                NSLog("[Swift] Replaced method")
-            } else {
-                // This runs when the ObjC version is also running and DOES work
-                method_exchangeImplementations(originalMethod, swizzledMethod)
-                NSLog("[Swift] Exchanged implementation")
-            }
+            method_exchangeImplementations(originalMethod, swizzledMethod)
         }
 
     }
